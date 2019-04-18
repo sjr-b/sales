@@ -30,7 +30,11 @@ public class SalesPerson {
     }
 
     public double calcTotalSales(){ // calculates total sales for the salesperson
-        // code missing
+        double total = 0;
+        for (int a = 0; a < this.salesHistory.length; a++){
+            total += this.salesHistory[a].getQuantity() * this.salesHistory[a].getValue();
+        }
+        return total;
     }
 
     public Sales largestSale(){ // calculates the sale with the largest value
